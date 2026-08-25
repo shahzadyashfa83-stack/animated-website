@@ -1,0 +1,373 @@
+/* ===========================
+   Google Font
+=========================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    overflow:hidden;
+    background:#05020f;
+    color:white;
+}
+
+/* ===========================
+   Screens
+=========================== */
+
+.screen{
+    width:100%;
+    height:100vh;
+    display:none;
+    justify-content:center;
+    align-items:center;
+    position:absolute;
+    top:0;
+    left:0;
+}
+
+.screen.active{
+    display:flex;
+}
+
+/* ===========================
+   Background
+=========================== */
+
+.background{
+    position:fixed;
+    inset:0;
+    overflow:hidden;
+
+    background:
+    radial-gradient(circle at top,#4a1d73,#0d061d 60%,black);
+}
+
+/* ===========================
+   Moon
+=========================== */
+
+.moon{
+
+    width:170px;
+    height:170px;
+
+    background:#ffe4c9;
+
+    border-radius:50%;
+
+    position:absolute;
+
+    top:60px;
+    right:70px;
+
+    box-shadow:
+
+    0 0 30px #ffd29c,
+
+    0 0 80px #ffaf62,
+
+    0 0 120px rgba(255,180,100,.6);
+}
+
+/* ===========================
+   Stars
+=========================== */
+
+.stars{
+    position:absolute;
+    inset:0;
+}
+
+.stars::before{
+
+content:"";
+
+position:absolute;
+
+width:4px;
+height:4px;
+
+background:white;
+
+border-radius:50%;
+
+box-shadow:
+
+100px 100px white,
+250px 220px white,
+380px 140px white,
+520px 70px white,
+650px 180px white,
+800px 100px white,
+1000px 300px white,
+1150px 160px white,
+150px 450px white,
+320px 600px white,
+600px 520px white,
+900px 580px white,
+1150px 480px white,
+1400px 350px white,
+1450px 600px white,
+200px 750px white,
+500px 800px white,
+850px 750px white,
+1200px 850px white;
+
+animation:twinkle 3s infinite alternate;
+}
+
+@keyframes twinkle{
+
+from{
+opacity:.3;
+}
+
+to{
+opacity:1;
+}
+}
+
+/* ===========================
+   Glass Card
+=========================== */
+
+.glass-card{
+
+width:460px;
+
+padding:45px;
+
+text-align:center;
+
+border-radius:25px;
+
+background:rgba(255,255,255,.12);
+
+backdrop-filter:blur(18px);
+
+border:1px solid rgba(255,255,255,.2);
+
+box-shadow:
+
+0 0 20px #ff4fbf,
+
+0 0 60px rgba(255,0,140,.5);
+
+animation:popup .8s;
+}
+
+.white{
+
+background:white;
+
+color:#333;
+}
+
+@keyframes popup{
+
+from{
+
+opacity:0;
+
+transform:scale(.6);
+}
+
+to{
+
+opacity:1;
+
+transform:scale(1);
+}
+
+}
+
+/* ===========================
+   Headings
+=========================== */
+
+h1{
+
+font-size:40px;
+
+margin-bottom:20px;
+
+text-shadow:0 0 15px hotpink;
+}
+
+h2{
+
+font-size:34px;
+
+margin-bottom:35px;
+}
+
+h3{
+
+font-size:26px;
+
+margin-top:20px;
+}
+
+p{
+
+font-size:20px;
+
+margin-bottom:30px;
+}
+
+/* ===========================
+   Buttons
+=========================== */
+
+button{
+
+padding:15px 40px;
+
+border:none;
+
+border-radius:40px;
+
+cursor:pointer;
+
+font-size:18px;
+
+font-weight:bold;
+
+transition:.3s;
+}
+
+#openBtn,
+.yes{
+
+background:#ff4f7d;
+
+color:white;
+
+box-shadow:0 0 20px #ff3f8b;
+}
+
+#openBtn:hover,
+.yes:hover{
+
+transform:scale(1.08);
+
+box-shadow:0 0 35px hotpink;
+}
+
+.no{
+
+background:#444;
+
+color:white;
+
+position:absolute;
+}
+
+/* ===========================
+   Proposal Buttons
+=========================== */
+
+.buttons{
+
+position:relative;
+
+height:100px;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+gap:150px;
+}
+
+/* ===========================
+   Love Page
+=========================== */
+
+.love-content{
+
+text-align:center;
+
+animation:fade 1.2s;
+}
+
+.teddy{
+
+font-size:110px;
+
+animation:bounce 2s infinite;
+}
+
+@keyframes bounce{
+
+0%{transform:translateY(0);}
+50%{transform:translateY(-25px);}
+100%{transform:translateY(0);}
+}
+
+@keyframes fade{
+
+from{
+
+opacity:0;
+
+transform:translateY(60px);
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+}
+}
+
+/* ===========================
+   Responsive
+=========================== */
+
+@media(max-width:768px){
+
+.glass-card{
+
+width:90%;
+padding:30px;
+}
+
+h1{
+
+font-size:30px;
+}
+
+h2{
+
+font-size:24px;
+}
+
+h3{
+
+font-size:20px;
+}
+
+button{
+
+font-size:16px;
+padding:12px 25px;
+}
+
+.moon{
+
+width:120px;
+height:120px;
+right:20px;
+}
+}
